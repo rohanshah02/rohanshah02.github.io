@@ -24,4 +24,4 @@ latest_posts:
   enabled: false
 ---
 
-I am a second-year PhD student in Operations and Information Management at the Wisconsin School of Business where I plan to focus on healthcare operations management. I am interested in the implementation of AI tools in clinical settings, the corporatization of healthcare, and clinical behavior. Prior to WSB, I completed my Bachelor's degree at UW-Madison where I majored in economics and data science with a minor in mathematics.
+I am a second-year PhD student in Operations and Information Management at the Wisconsin School of Business where I plan to focus on healthcare operations management. I am interested in the implementation of AI tools in clinical settings, the corporatization of healthcare, and clinician behavior. Prior to WSB, I completed my Bachelor's degree at UW-Madison where I majored in economics and data science with a minor in mathematics.
