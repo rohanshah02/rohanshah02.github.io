@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student, <a href='https://business.wisc.edu/departments/operations-information-management/'>Operations and Information Management</a>, Wisconsin School of Business
+subtitle: PhD Student, <a href='https://business.wisc.edu/faculty-research/operations-information-management/'>Operations and Information Management</a>, Wisconsin School of Business
 
 profile:
   align: right
