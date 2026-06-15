@@ -37,20 +37,25 @@ cv:
           - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
 
     Research Interests:
-      - Healthcare Operations Management
-      - AI in Clinical Settings
-      - Health Economics
-      - Behavioral Economics
+      - label: Healthcare Operations Management
+        details: ""
+      - label: AI in Clinical Settings
+        details: ""
+      - label: Health Economics
+        details: ""
+      - label: Behavioral Economics
+        details: ""
 
     Published Papers:
       - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
         authors:
           - Rohan Shah
           - Anita Mukherjee
-        publisher: Journal of Behavioral and Experimental Finance
-        releaseDate: 2026-03
-        url: https://doi.org/10.1016/j.jbef.2025.101137
-        summary: "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
+        journal: Journal of Behavioral and Experimental Finance
+        date: 2026-03
+        doi: 10.1016/j.jbef.2025.101137
+        highlights:
+          - "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
 
     Research Experience:
       - company: Behavior Change for Good Initiative, The Wharton School
@@ -58,18 +63,21 @@ cv:
         location: Philadelphia, PA
         start_date: 2023
         end_date: 2023
+        highlights: []
 
       - company: LSESU Economics Society, London School of Economics
         position: Research Associate
         location: London, United Kingdom
         start_date: 2022
         end_date: 2023
+        highlights: []
 
       - company: Westergaard Lab, UW Department of Medicine
         position: Research Assistant
         location: Madison, WI
         start_date: 2021
         end_date: 2022
+        highlights: []
 
     Industry Experience:
       - company: Analysis Group
@@ -77,9 +85,11 @@ cv:
         location: Chicago, IL
         start_date: 2024
         end_date: 2024
+        highlights: []
 
       - company: Thermo Fisher Scientific
         position: BI & Data Visualization Intern, Finance Data Science
         location: Carlsbad, CA
         start_date: 2022
         end_date: 2022
+        highlights: []
