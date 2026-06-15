@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title: Teaching
 description:
 nav: true
 nav_order: 4
@@ -9,8 +9,18 @@ nav_order: 4
 
 ## Teaching Assistantships
 
-**GB306: Business Analytics I** — Fall 2025 & Spring 2026
+### Spring 2026
 
-Wisconsin School of Business, University of Wisconsin-Madison
+**GB306: Business Analytics I** — Teaching Assistant
+*Wisconsin School of Business, University of Wisconsin-Madison*
 
-Responsible for leading weekly discussion sections, hosting office hours, and grading for an undergraduate business analytics course.
+Led weekly discussion sections, hosted office hours, and graded for an undergraduate business analytics course.
+
+---
+
+### Fall 2025
+
+**GB306: Business Analytics I** — Teaching Assistant
+*Wisconsin School of Business, University of Wisconsin-Madison*
+
+Led weekly discussion sections, hosted office hours, and graded for an undergraduate business analytics course.

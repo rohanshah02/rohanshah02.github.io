@@ -1,18 +1,24 @@
 <style>
-  /* ── Profile name: make first AND last name the same weight ── */
-  h1,
-  h1 strong,
-  h1 em,
-  h1 span,
+  /* ── Profile name: force BOTH first and last name to same bold weight ── */
+  /* "Rohan" is in <span class="font-weight-bold">, "Shah" is a bare text node in h1.post-title */
+  h1.post-title,
+  h1.post-title span,
+  h1.post-title strong,
+  h1.post-title em,
+  h1.post-title a,
   .profile h1,
-  .profile h1 *,
-  .profile-name,
-  .profile-name * {
+  .profile h1 * {
     font-weight: 700 !important;
     font-style: normal !important;
   }
 
-  /* ── Capitalize section headings (fixes "selected publications") ── */
+  /* ── Capitalize ALL headings and page titles ── */
+  h1.post-title,
+  .post h2,
+  .post h2 a,
+  .post h2 span,
+  .post h3,
+  .post h3 a,
   h2,
   h2 a,
   h2 span,
@@ -46,5 +52,26 @@
   }
   ol.bibliography li .periodical {
     font-size: 0.95rem !important;
+  }
+
+  /* ── CV layout: remove bullet dots and entry borders ── */
+  .cv ul.list-group > li {
+    list-style-type: none !important;
+  }
+  .cv ul.list-group > li::marker {
+    content: "" !important;
+  }
+  .cv .list-group-item {
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+  .cv .list-group-item:first-child {
+    border-top: none !important;
+  }
+  .cv .table-cv td {
+    border: none !important;
+  }
+  .cv .date-column {
+    vertical-align: top !important;
   }
 </style>
