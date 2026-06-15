@@ -1,82 +1,56 @@
-- title: Education
-  type: time_table
-  contents:
-    - title: Doctor of Philosophy (PhD)
-      institution: University of Wisconsin-Madison
-      year: 2025 -
-      location: Madison, WI
-      description:
-        - Operations and Information Management
-        - Wisconsin School of Business
+cv:
+  sections:
+    Education:
+      - studyType: Doctor of Philosophy (PhD)
+        institution: University of Wisconsin-Madison
+        area: Operations and Information Management
+        start_date: "2025"
+        location: Madison, WI
+        highlights:
+          - Wisconsin School of Business
 
-    - title: Bachelor of Science
-      institution: University of Wisconsin-Madison
-      year: 2021 - 2025
-      location: Madison, WI
-      description:
-        - Economics and Data Science
-        - "GPA: 3.9 / 4.0"
-        - Minor in Mathematics
-        - "Senior Thesis: <i>The Impacts of Private Equity Acquisition on Clinical Practice for Medicare-serving Physicians in Group Practice</i> (Advised by Prof. Ashley Swanson)"
+      - studyType: Bachelor of Science
+        institution: University of Wisconsin-Madison
+        area: Economics and Data Science
+        start_date: "2021"
+        end_date: "2025"
+        location: Madison, WI
+        highlights:
+          - "GPA: 3.9 / 4.0"
+          - Minor in Mathematics
+          - "Senior Thesis: <i>The Impacts of Private Equity Acquisition on Clinical Practice for Medicare-serving Physicians in Group Practice</i> (Advised by Prof. Ashley Swanson)"
 
-    - title: The General Course (Study Abroad)
-      institution: The London School of Economics and Political Science
-      year: 2022 - 2023
-      location: London, United Kingdom
-      description:
-        - First Class Honours
-        - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
+      - studyType: The General Course (Study Abroad)
+        institution: The London School of Economics and Political Science
+        start_date: "2022"
+        end_date: "2023"
+        location: London, United Kingdom
+        highlights:
+          - First Class Honours
+          - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
 
-- title: Research Interests
-  type: list
-  contents:
-    - Healthcare Operations Management
-    - Health Economics
-    - Behavioral Operations Management
+    Research Interests:
+      - bullet: Healthcare Operations Management
+      - bullet: Health Economics
+      - bullet: Behavioral Operations Management
 
-- title: Published Papers
-  type: time_table
-  contents:
-    - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
-      year: "Mar 2026"
-      description:
-        - "Rohan Shah and Anita Mukherjee"
-        - "<i>Journal of Behavioral and Experimental Finance</i>"
-        - "<a href='https://doi.org/10.1016/j.jbef.2025.101137'>DOI: 10.1016/j.jbef.2025.101137</a>"
-        - "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant"
+    Publications:
+      - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
+        releaseDate: "2026-03"
+        publisher: "Journal of Behavioral and Experimental Finance"
+        summary: "Rohan Shah and Anita Mukherjee. Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
+        url: "https://doi.org/10.1016/j.jbef.2025.101137"
 
-- title: Research Experience
-  type: time_table
-  contents:
-    - title: Research Assistant
-      institution: Behavior Change for Good Initiative, The Wharton School
-      year: 2023
-      location: Philadelphia, PA
-      description: Conducted research on behavioral interventions and decision-making.
+    Research Experience:
+      - label: "Research Assistant (2023) — Behavior Change for Good Initiative, The Wharton School, Philadelphia, PA"
+        details: Conducted research on behavioral interventions and decision-making.
+      - label: "Research Associate (2022–2023) — LSESU Economics Society, London School of Economics, London, UK"
+        details: Conducted economic research and analysis.
+      - label: "Research Assistant (2021–2022) — Westergaard Lab, UW Department of Medicine, Madison, WI"
+        details: Assisted with medical research projects.
 
-    - title: Research Associate
-      institution: LSESU Economics Society, London School of Economics
-      year: 2022 - 2023
-      location: London, United Kingdom
-      description: Conducted economic research and analysis.
-
-    - title: Research Assistant
-      institution: Westergaard Lab, UW Department of Medicine
-      year: 2021 - 2022
-      location: Madison, WI
-      description: Assisted with medical research projects.
-
-- title: Industry Experience
-  type: time_table
-  contents:
-    - title: Summer Analyst
-      institution: Analysis Group
-      year: "Summer 2024"
-      location: Chicago, IL
-      description: Economic consulting on litigation and strategy engagements.
-
-    - title: "BI & Data Visualization Intern, Finance Data Science"
-      institution: Thermo Fisher Scientific
-      year: "Summer 2022"
-      location: Carlsbad, CA
-      description: Built business intelligence dashboards and data visualizations for the finance data science team.
+    Industry Experience:
+      - label: "Summer Analyst (Summer 2024) — Analysis Group, Chicago, IL"
+        details: Economic consulting on litigation and strategy engagements.
+      - label: "BI & Data Visualization Intern, Finance Data Science (Summer 2022) — Thermo Fisher Scientific, Carlsbad, CA"
+        details: Built business intelligence dashboards and data visualizations for the finance data science team.
