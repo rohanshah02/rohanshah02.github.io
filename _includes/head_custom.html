@@ -1,27 +1,27 @@
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('h3').forEach(function (h) {
-      if (h.textContent.trim() === 'Contact Information') {
-        var card = h.closest('.card');
-        if (card) card.style.display = 'none';
-      }
-    });
-  });
-</script>
-
 <style>
-  /* Bold full name (first AND last) */
-  h1 {
+  /* ── Profile name: make first AND last name the same weight ── */
+  h1,
+  h1 strong,
+  h1 em,
+  h1 span,
+  .profile h1,
+  .profile h1 *,
+  .profile-name,
+  .profile-name * {
     font-weight: 700 !important;
+    font-style: normal !important;
   }
 
-  /* Capitalize section headings like "selected publications" */
+  /* ── Capitalize section headings (fixes "selected publications") ── */
   h2,
-  h2 a {
+  h2 a,
+  h2 span,
+  h3.card-title,
+  .card-title {
     text-transform: capitalize !important;
   }
 
-  /* Fix left empty column in publication cards */
+  /* ── Fix left empty column in publication cards ── */
   .publications .abbr-col,
   .publications .preview-col {
     display: none !important;
@@ -31,7 +31,7 @@
     flex: 0 0 100% !important;
   }
 
-  /* Increase publication entry font sizes */
+  /* ── Increase publication entry font sizes ── */
   ol.bibliography li {
     font-size: 1rem !important;
     line-height: 1.65 !important;
@@ -45,5 +45,14 @@
   }
   ol.bibliography li .periodical {
     font-size: 0.95rem !important;
+  }
+
+  /* ── CV page: spacing between entries ── */
+  .page-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .page-content p {
+    margin-bottom: 0.25rem;
   }
 </style>
