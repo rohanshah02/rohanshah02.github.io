@@ -1,8 +1,5 @@
 cv:
   name: Rohan Shah
-  email: rpshah3@wisc.edu
-  location: Madison, WI
-
   sections:
     Education:
       - institution: University of Wisconsin-Madison
@@ -36,25 +33,19 @@ cv:
           - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
 
     Research Interests:
-      - label: Healthcare Operations Management
-        details: ""
-      - label: AI in Clinical Settings
-        details: ""
-      - label: Health Economics
-        details: ""
-      - label: Behavioral Economics
-        details: ""
+      - name: Healthcare Operations Management
+      - name: Health Economics
+      - name: Behavioral Operations Management
 
     Published Papers:
       - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
         authors:
           - Rohan Shah
           - Anita Mukherjee
-        journal: Journal of Behavioral and Experimental Finance
-        date: 2026-03
-        doi: 10.1016/j.jbef.2025.101137
-        highlights:
-          - "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
+        publisher: Journal of Behavioral and Experimental Finance
+        releaseDate: 2026-03
+        url: https://doi.org/10.1016/j.jbef.2025.101137
+        summary: "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
 
     Research Experience:
       - company: Behavior Change for Good Initiative, The Wharton School
@@ -62,21 +53,24 @@ cv:
         location: Philadelphia, PA
         start_date: 2023
         end_date: 2023
-        highlights: []
+        highlights:
+          - Worked on research related to behavioral interventions.
 
       - company: LSESU Economics Society, London School of Economics
         position: Research Associate
         location: London, United Kingdom
         start_date: 2022
         end_date: 2023
-        highlights: []
+        highlights:
+          - Conducted economic research and analysis.
 
       - company: Westergaard Lab, UW Department of Medicine
         position: Research Assistant
         location: Madison, WI
         start_date: 2021
         end_date: 2022
-        highlights: []
+        highlights:
+          - Assisted with medical research projects.
 
     Industry Experience:
       - company: Analysis Group
@@ -84,11 +78,13 @@ cv:
         location: Chicago, IL
         start_date: 2024
         end_date: 2024
-        highlights: []
+        highlights:
+          - Economic consulting.
 
       - company: Thermo Fisher Scientific
         position: BI & Data Visualization Intern, Finance Data Science
         location: Carlsbad, CA
         start_date: 2022
         end_date: 2022
-        highlights: []
+        highlights:
+          - Business intelligence and data visualization for finance.
