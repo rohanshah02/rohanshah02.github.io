@@ -1,40 +1,36 @@
+<script>
+  // Set CSS variables via JS inline styles — inline styles win the cascade unconditionally,
+  // so this bypasses any specificity/order battle with the gem's main.css.
+  (function () {
+    var r = document.documentElement;
+    r.style.setProperty("--global-theme-color", "#1b2a4a");
+    r.style.setProperty("--global-hover-color", "#c41230");
+    r.style.setProperty("--global-hover-text-color", "#ffffff");
+    r.style.setProperty("--global-highlight-color", "#c41230");
+    r.style.setProperty("--global-footer-bg-color", "#1b2a4a");
+    r.style.setProperty("--global-footer-text-color", "#e8e8e8");
+    r.style.setProperty("--global-footer-link-color", "#ffffff");
+  })();
+</script>
+
 <style>
-  /* ── Color scheme: Navy (#1b2a4a), Red (#c41230), White ── */
-  :root {
-    --global-theme-color:       #1b2a4a !important; /* navy — links, badges, accents */
-    --global-hover-color:       #c41230 !important; /* red — hover states */
-    --global-hover-text-color:  #ffffff !important;
-    --global-highlight-color:   #c41230 !important; /* red — highlights */
-    --global-footer-bg-color:   #1b2a4a !important; /* navy footer */
-    --global-footer-text-color: #e8e8e8 !important;
-    --global-footer-link-color: #ffffff !important;
-  }
-
-  /* ── Profile name: force BOTH first and last name to same bold weight ── */
-  h1.post-title,
-  h1.post-title span,
-  h1.post-title strong,
-  h1.post-title em,
-  h1.post-title a,
-  .profile h1,
-  .profile h1 * {
+  /* ── Profile name: match weight of the .font-weight-bold span ── */
+  /* "Rohan" → <span class="font-weight-bold">; "Shah" → bare text node in h1 */
+  /* Target h1.post-title with maximum practical specificity so the whole h1 is bold */
+  html body h1.post-title,
+  html body h1.post-title span,
+  html body h1.post-title * {
     font-weight: 700 !important;
-    font-style: normal !important;
   }
 
-  /* ── Capitalize ALL headings and page/nav titles ── */
-  h1.post-title,
-  .post h2,
-  .post h2 a,
-  .post h2 span,
-  .post h3,
-  .post h3 a,
-  h2,
-  h2 a,
-  h2 span,
-  h3,
-  h3 a,
-  .card-title {
+  /* ── Capitalize "selected publications" and all h2/h3 headings ── */
+  /* Use html prefix to outrank any same-specificity gem rule */
+  html h2,
+  html h2 a,
+  html h2 span,
+  html h3,
+  html h3 a,
+  html .card-title {
     text-transform: capitalize !important;
   }
 
@@ -73,7 +69,7 @@
   }
   .cv .list-group-item {
     border: none !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
   }
   .cv .list-group-item:first-child {
     border-top: none !important;
