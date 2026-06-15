@@ -1,90 +1,82 @@
-cv:
-  name: Rohan Shah
-  sections:
-    Education:
-      - institution: University of Wisconsin-Madison
-        location: Madison, WI
-        area: Operations and Information Management
-        studyType: Doctor of Philosophy (PhD)
-        start_date: 2025
-        end_date: present
-        highlights:
-          - Wisconsin School of Business
+- title: Education
+  type: time_table
+  contents:
+    - title: Doctor of Philosophy (PhD)
+      institution: University of Wisconsin-Madison
+      year: 2025 -
+      location: Madison, WI
+      description:
+        - Operations and Information Management
+        - Wisconsin School of Business
 
-      - institution: University of Wisconsin-Madison
-        location: Madison, WI
-        area: Economics and Data Science
-        studyType: Bachelor of Science
-        start_date: 2021
-        end_date: 2025
-        highlights:
-          - "GPA: 3.9 / 4.0"
-          - "Minor in Mathematics"
-          - "Senior Thesis: The Impacts of Private Equity Acquisition on Clinical Practice for Medicare-serving Physicians in Group Practice (Advised by Prof. Ashley Swanson)"
+    - title: Bachelor of Science
+      institution: University of Wisconsin-Madison
+      year: 2021 - 2025
+      location: Madison, WI
+      description:
+        - Economics and Data Science
+        - "GPA: 3.9 / 4.0"
+        - Minor in Mathematics
+        - "Senior Thesis: <i>The Impacts of Private Equity Acquisition on Clinical Practice for Medicare-serving Physicians in Group Practice</i> (Advised by Prof. Ashley Swanson)"
 
-      - institution: The London School of Economics and Political Science
-        location: London, United Kingdom
-        area: The General Course (Study Abroad)
-        studyType: ""
-        start_date: 2022
-        end_date: 2023
-        highlights:
-          - First Class Honors
-          - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
+    - title: The General Course (Study Abroad)
+      institution: The London School of Economics and Political Science
+      year: 2022 - 2023
+      location: London, United Kingdom
+      description:
+        - First Class Honours
+        - "Coursework: Machine Learning, Asset Pricing and Corporate Finance, Macroeconomics, Development Economics, Philosophy"
 
-    Research Interests:
-      - name: Healthcare Operations Management
-      - name: Health Economics
-      - name: Behavioral Operations Management
+- title: Research Interests
+  type: list
+  contents:
+    - Healthcare Operations Management
+    - Health Economics
+    - Behavioral Operations Management
 
-    Published Papers:
-      - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
-        authors:
-          - Rohan Shah
-          - Anita Mukherjee
-        publisher: Journal of Behavioral and Experimental Finance
-        releaseDate: 2026-03
-        url: https://doi.org/10.1016/j.jbef.2025.101137
-        summary: "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant."
+- title: Published Papers
+  type: time_table
+  contents:
+    - title: "Procrastination in Personal Finance: Implications for Estate Planning and Retirement Satisfaction"
+      year: "Mar 2026"
+      description:
+        - "Rohan Shah and Anita Mukherjee"
+        - "<i>Journal of Behavioral and Experimental Finance</i>"
+        - "<a href='https://doi.org/10.1016/j.jbef.2025.101137'>DOI: 10.1016/j.jbef.2025.101137</a>"
+        - "Grant: Pension Research Council / UPenn-TIAA Institute Partnership Grant"
 
-    Research Experience:
-      - company: Behavior Change for Good Initiative, The Wharton School
-        position: Research Assistant
-        location: Philadelphia, PA
-        start_date: 2023
-        end_date: 2023
-        highlights:
-          - Worked on research related to behavioral interventions.
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Research Assistant
+      institution: Behavior Change for Good Initiative, The Wharton School
+      year: 2023
+      location: Philadelphia, PA
+      description: Conducted research on behavioral interventions and decision-making.
 
-      - company: LSESU Economics Society, London School of Economics
-        position: Research Associate
-        location: London, United Kingdom
-        start_date: 2022
-        end_date: 2023
-        highlights:
-          - Conducted economic research and analysis.
+    - title: Research Associate
+      institution: LSESU Economics Society, London School of Economics
+      year: 2022 - 2023
+      location: London, United Kingdom
+      description: Conducted economic research and analysis.
 
-      - company: Westergaard Lab, UW Department of Medicine
-        position: Research Assistant
-        location: Madison, WI
-        start_date: 2021
-        end_date: 2022
-        highlights:
-          - Assisted with medical research projects.
+    - title: Research Assistant
+      institution: Westergaard Lab, UW Department of Medicine
+      year: 2021 - 2022
+      location: Madison, WI
+      description: Assisted with medical research projects.
 
-    Industry Experience:
-      - company: Analysis Group
-        position: Summer Analyst
-        location: Chicago, IL
-        start_date: 2024
-        end_date: 2024
-        highlights:
-          - Economic consulting.
+- title: Industry Experience
+  type: time_table
+  contents:
+    - title: Summer Analyst
+      institution: Analysis Group
+      year: "Summer 2024"
+      location: Chicago, IL
+      description: Economic consulting on litigation and strategy engagements.
 
-      - company: Thermo Fisher Scientific
-        position: BI & Data Visualization Intern, Finance Data Science
-        location: Carlsbad, CA
-        start_date: 2022
-        end_date: 2022
-        highlights:
-          - Business intelligence and data visualization for finance.
+    - title: "BI & Data Visualization Intern, Finance Data Science"
+      institution: Thermo Fisher Scientific
+      year: "Summer 2022"
+      location: Carlsbad, CA
+      description: Built business intelligence dashboards and data visualizations for the finance data science team.
