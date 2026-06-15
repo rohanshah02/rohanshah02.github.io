@@ -1,8 +1,13 @@
 <style>
-  /* Capitalize "selected publications" heading */
-  .publications h2,
-  .publications h2 a {
-    text-transform: capitalize;
+  /* Bold full name (first AND last) */
+  h1 {
+    font-weight: 700 !important;
+  }
+
+  /* Capitalize section headings like "selected publications" */
+  h2,
+  h2 a {
+    text-transform: capitalize !important;
   }
 
   /* Fix left empty column in publication cards */
@@ -13,5 +18,21 @@
   .publications .main-col {
     max-width: 100% !important;
     flex: 0 0 100% !important;
+  }
+
+  /* Increase publication entry font sizes */
+  ol.bibliography li {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+  }
+  ol.bibliography li .title {
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+  }
+  ol.bibliography li .author {
+    font-size: 0.95rem !important;
+  }
+  ol.bibliography li .periodical {
+    font-size: 0.95rem !important;
   }
 </style>
