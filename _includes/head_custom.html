@@ -1,6 +1,16 @@
 <style>
+  /* ── Color scheme: Navy (#1b2a4a), Red (#c41230), White ── */
+  :root {
+    --global-theme-color:       #1b2a4a !important; /* navy — links, badges, accents */
+    --global-hover-color:       #c41230 !important; /* red — hover states */
+    --global-hover-text-color:  #ffffff !important;
+    --global-highlight-color:   #c41230 !important; /* red — highlights */
+    --global-footer-bg-color:   #1b2a4a !important; /* navy footer */
+    --global-footer-text-color: #e8e8e8 !important;
+    --global-footer-link-color: #ffffff !important;
+  }
+
   /* ── Profile name: force BOTH first and last name to same bold weight ── */
-  /* "Rohan" is in <span class="font-weight-bold">, "Shah" is a bare text node in h1.post-title */
   h1.post-title,
   h1.post-title span,
   h1.post-title strong,
@@ -12,7 +22,7 @@
     font-style: normal !important;
   }
 
-  /* ── Capitalize ALL headings and page titles ── */
+  /* ── Capitalize ALL headings and page/nav titles ── */
   h1.post-title,
   .post h2,
   .post h2 a,
