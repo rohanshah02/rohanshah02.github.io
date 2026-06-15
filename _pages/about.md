@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD Student, <a href='https://business.wisc.edu/faculty-research/operations-information-management/'>Operations and Information Management</a>, Wisconsin School of Business
 
