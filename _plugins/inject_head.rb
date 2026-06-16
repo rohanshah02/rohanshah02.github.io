@@ -64,10 +64,13 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
         });
       }
       function cvdates(){
-        /* Rewrite bachelor date badge to just graduation year */
-        document.querySelectorAll('.cv .list-group-item table th').forEach(function(th){
-          var t=th.textContent.replace(/\s+/g,' ').trim();
-          if(/2021/.test(t)&&/2025/.test(t)){th.textContent='2025';}
+        /* Rewrite bachelor date badge to just graduation year.
+           Search all leaf elements inside .cv — badge may be th, span, or div */
+        document.querySelectorAll('.cv *').forEach(function(el){
+          if(el.children.length===0){
+            var t=el.textContent.replace(/[\s ]+/g,' ').trim();
+            if(/2021/.test(t)&&/2025/.test(t)){el.textContent='2025';}
+          }
         });
       }
       function navname(){
