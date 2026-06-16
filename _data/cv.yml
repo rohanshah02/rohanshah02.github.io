@@ -12,7 +12,7 @@ cv:
       - studyType: Bachelor of Science
         institution: University of Wisconsin-Madison
         area: Economics and Data Science
-        end_date: "2025"
+        date: "2025"
         location: Madison, WI
         highlights:
           - "GPA: 3.9 / 4.0"
