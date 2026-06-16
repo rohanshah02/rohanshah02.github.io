@@ -1,30 +1,61 @@
-<script>
-  // Set CSS variables via JS inline styles — inline styles win the cascade unconditionally,
-  // so this bypasses any specificity/order battle with the gem's main.css.
-  (function () {
-    var r = document.documentElement;
-    r.style.setProperty("--global-theme-color", "#1b2a4a");
-    r.style.setProperty("--global-hover-color", "#c41230");
-    r.style.setProperty("--global-hover-text-color", "#ffffff");
-    r.style.setProperty("--global-highlight-color", "#c41230");
-    r.style.setProperty("--global-footer-bg-color", "#1b2a4a");
-    r.style.setProperty("--global-footer-text-color", "#e8e8e8");
-    r.style.setProperty("--global-footer-link-color", "#ffffff");
-  })();
-</script>
-
 <style>
-  /* ── Profile name: match weight of the .font-weight-bold span ── */
-  /* "Rohan" → <span class="font-weight-bold">; "Shah" → bare text node in h1 */
-  /* Target h1.post-title with maximum practical specificity so the whole h1 is bold */
+  /* ─────────────────────────────────────────────────────────────────
+     NAVY / RED / WHITE COLOR SCHEME
+     Setting on `body` (not :root) wins via DOM inheritance proximity:
+     every visible element is a child of body, so it sees body's value
+     before it ever reaches :root — no !important or cascade order needed.
+  ──────────────────────────────────────────────────────────────────── */
+  body {
+    --global-theme-color:       #1b2a4a;
+    --global-hover-color:       #c41230;
+    --global-hover-text-color:  #ffffff;
+    --global-highlight-color:   #c41230;
+    --global-footer-bg-color:   #1b2a4a;
+    --global-footer-text-color: #e8e8e8;
+    --global-footer-link-color: #ffffff;
+  }
+
+  /* Belt-and-suspenders: direct property overrides for the most visible elements */
+  a,
+  table.table a {
+    color: #1b2a4a !important;
+  }
+  a:hover,
+  table.table a:hover,
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+  footer.fixed-bottom a:hover {
+    color: #c41230 !important;
+  }
+  footer.fixed-bottom {
+    background-color: #1b2a4a !important;
+  }
+  footer.fixed-bottom .container {
+    color: #e8e8e8 !important;
+  }
+  footer.fixed-bottom a {
+    color: #ffffff !important;
+  }
+  .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+    color: #1b2a4a !important;
+  }
+  .cv .card .list-group-item .badge {
+    background-color: #1b2a4a !important;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     PROFILE NAME: make "Rohan" and "Shah" the same bold weight.
+     "Rohan" is in <span class="font-weight-bold">; "Shah" is a bare
+     text node in h1. Setting font-weight on h1 makes Shah inherit it.
+  ──────────────────────────────────────────────────────────────────── */
   html body h1.post-title,
   html body h1.post-title span,
   html body h1.post-title * {
     font-weight: 700 !important;
   }
 
-  /* ── Capitalize "selected publications" and all h2/h3 headings ── */
-  /* Use html prefix to outrank any same-specificity gem rule */
+  /* ─────────────────────────────────────────────────────────────────
+     CAPITALIZE headings ("selected publications" → "Selected Publications")
+  ──────────────────────────────────────────────────────────────────── */
   html h2,
   html h2 a,
   html h2 span,
@@ -34,7 +65,9 @@
     text-transform: capitalize !important;
   }
 
-  /* ── Fix left empty column in publication cards ── */
+  /* ─────────────────────────────────────────────────────────────────
+     PUBLICATION LAYOUT fixes
+  ──────────────────────────────────────────────────────────────────── */
   .publications .abbr-col,
   .publications .preview-col {
     display: none !important;
@@ -43,8 +76,6 @@
     max-width: 100% !important;
     flex: 0 0 100% !important;
   }
-
-  /* ── Increase publication entry font sizes ── */
   ol.bibliography li {
     font-size: 1rem !important;
     line-height: 1.65 !important;
@@ -60,7 +91,9 @@
     font-size: 0.95rem !important;
   }
 
-  /* ── CV layout: remove bullet dots and entry borders ── */
+  /* ─────────────────────────────────────────────────────────────────
+     CV LAYOUT: remove bullet dots and entry borders
+  ──────────────────────────────────────────────────────────────────── */
   .cv ul.list-group > li {
     list-style-type: none !important;
   }
