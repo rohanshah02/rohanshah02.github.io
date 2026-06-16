@@ -1,116 +1,81 @@
 <style>
-  /* ─────────────────────────────────────────────────────────────────
-     NAVY / RED / WHITE COLOR SCHEME
-     Setting on `body` (not :root) wins via DOM inheritance proximity:
-     every visible element is a child of body, so it sees body's value
-     before it ever reaches :root — no !important or cascade order needed.
-  ──────────────────────────────────────────────────────────────────── */
-  body {
-    --global-theme-color:       #1b2a4a;
-    --global-hover-color:       #c41230;
-    --global-hover-text-color:  #ffffff;
-    --global-highlight-color:   #c41230;
-    --global-footer-bg-color:   #1b2a4a;
-    --global-footer-text-color: #e8e8e8;
-    --global-footer-link-color: #ffffff;
-  }
-
-  /* Belt-and-suspenders: direct property overrides for the most visible elements */
-  a,
-  table.table a {
-    color: #1b2a4a !important;
-  }
-  a:hover,
-  table.table a:hover,
-  .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
-  footer.fixed-bottom a:hover {
-    color: #c41230 !important;
-  }
-  footer.fixed-bottom {
-    background-color: #1b2a4a !important;
-  }
-  footer.fixed-bottom .container {
-    color: #e8e8e8 !important;
-  }
-  footer.fixed-bottom a {
-    color: #ffffff !important;
-  }
-  .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
-    color: #1b2a4a !important;
-  }
-  .cv .card .list-group-item .badge {
-    background-color: #1b2a4a !important;
-  }
-
-  /* ─────────────────────────────────────────────────────────────────
-     PROFILE NAME: make "Rohan" and "Shah" the same bold weight.
-     "Rohan" is in <span class="font-weight-bold">; "Shah" is a bare
-     text node in h1. Setting font-weight on h1 makes Shah inherit it.
-  ──────────────────────────────────────────────────────────────────── */
-  html body h1.post-title,
-  html body h1.post-title span,
-  html body h1.post-title * {
-    font-weight: 700 !important;
-  }
-
-  /* ─────────────────────────────────────────────────────────────────
-     CAPITALIZE headings ("selected publications" → "Selected Publications")
-  ──────────────────────────────────────────────────────────────────── */
-  html h2,
-  html h2 a,
-  html h2 span,
-  html h3,
-  html h3 a,
-  html .card-title {
-    text-transform: capitalize !important;
-  }
-
-  /* ─────────────────────────────────────────────────────────────────
-     PUBLICATION LAYOUT fixes
-  ──────────────────────────────────────────────────────────────────── */
+  /* ─── PUBLICATION LAYOUT ─── */
   .publications .abbr-col,
-  .publications .preview-col {
-    display: none !important;
-  }
-  .publications .main-col {
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-  }
-  ol.bibliography li {
-    font-size: 1rem !important;
-    line-height: 1.65 !important;
-  }
-  ol.bibliography li .title {
-    font-size: 1.05rem !important;
-    font-weight: 600 !important;
-  }
-  ol.bibliography li .author {
-    font-size: 0.95rem !important;
-  }
-  ol.bibliography li .periodical {
-    font-size: 0.95rem !important;
+  .publications .preview-col { display: none !important; }
+  .publications .main-col { max-width: 100% !important; flex: 0 0 100% !important; }
+  ol.bibliography li { font-size: 1rem !important; line-height: 1.65 !important; }
+  ol.bibliography li .title { font-size: 1.05rem !important; font-weight: 600 !important; }
+  ol.bibliography li .author { font-size: 0.95rem !important; }
+  ol.bibliography li .periodical { font-size: 0.95rem !important; }
+
+  /* ─── CV LAYOUT ─── */
+  .cv ul.list-group > li { list-style-type: none !important; }
+  .cv ul.list-group > li::marker { content: "" !important; }
+  .cv .list-group-item { border: none !important; border-top: 1px solid rgba(0,0,0,0.06) !important; }
+  .cv .list-group-item:first-child { border-top: none !important; }
+  .cv .table-cv td { border: none !important; }
+  .cv .date-column { vertical-align: top !important; }
+</style>
+
+<script>
+(function () {
+  var NAVY  = '#1b2a4a';
+  var RED   = '#c41230';
+  var WHITE = '#ffffff';
+
+  /* 1. Set all color-scheme CSS variables on both <html> and <body>.
+        We do both because the dark-mode JS may set inline styles on either. */
+  var COLOR_VARS = {
+    '--global-theme-color':       NAVY,
+    '--global-hover-color':       RED,
+    '--global-hover-text-color':  WHITE,
+    '--global-highlight-color':   RED,
+    '--global-footer-bg-color':   NAVY,
+    '--global-footer-text-color': '#e8e8e8',
+    '--global-footer-link-color': WHITE
+  };
+
+  function applyColors() {
+    var keys = Object.keys(COLOR_VARS);
+    for (var i = 0; i < keys.length; i++) {
+      document.documentElement.style.setProperty(keys[i], COLOR_VARS[keys[i]]);
+      if (document.body) { document.body.style.setProperty(keys[i], COLOR_VARS[keys[i]]); }
+    }
   }
 
-  /* ─────────────────────────────────────────────────────────────────
-     CV LAYOUT: remove bullet dots and entry borders
-  ──────────────────────────────────────────────────────────────────── */
-  .cv ul.list-group > li {
-    list-style-type: none !important;
+  /* 2. Capitalize h2/h3/card-title elements (inline style beats any stylesheet rule) */
+  function applyTypography() {
+    document.querySelectorAll('h2, h3, .card-title').forEach(function (el) {
+      el.style.textTransform = 'capitalize';
+      el.querySelectorAll('a, span').forEach(function (child) {
+        child.style.textTransform = 'capitalize';
+      });
+    });
+
+    /* Bold the full "Rohan Shah" title so both words match */
+    var titleEl = document.querySelector('h1.post-title');
+    if (titleEl) {
+      titleEl.style.fontWeight = '700';
+      Array.from(titleEl.children).forEach(function (child) {
+        child.style.fontWeight = '700';
+      });
+    }
   }
-  .cv ul.list-group > li::marker {
-    content: "" !important;
+
+  /* 3. Run as soon as the DOM is ready */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { applyColors(); applyTypography(); });
+  } else {
+    applyColors();
+    applyTypography();
   }
-  .cv .list-group-item {
-    border: none !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+  /* 4. Re-assert colors after dark-mode toggle
+        The theme JS flips [data-theme] or a class on <html>;
+        the observer fires and we re-apply our values on top. */
+  if (window.MutationObserver) {
+    new MutationObserver(function () { applyColors(); })
+      .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
   }
-  .cv .list-group-item:first-child {
-    border-top: none !important;
-  }
-  .cv .table-cv td {
-    border: none !important;
-  }
-  .cv .date-column {
-    vertical-align: top !important;
-  }
-</style>
+})();
+</script>
