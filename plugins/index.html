@@ -15,10 +15,16 @@
   /* ── CV layout ── */
   .cv ul.list-group>li{list-style-type:none!important}
   .cv ul.list-group>li::marker{content:""!important}
-  .cv .list-group-item{border:none!important;border-top:1px solid rgba(0,0,0,.06)!important}
-  .cv .list-group-item:first-child{border-top:none!important}
-  .cv .table-cv td{border:none!important}
-  .cv .date-column{vertical-align:top!important;width:155px!important;min-width:155px!important;word-wrap:break-word!important}
+  /* Experience entries: add generous padding so they breathe */
+  .cv .list-group-item{border:none!important;border-top:1px solid rgba(0,0,0,.08)!important;padding:1rem 1.25rem!important}
+  .cv .list-group-item:first-child{border-top:none!important;padding-top:.25rem!important}
+  /* Education table: tighter cell padding so rows aren't over-tall */
+  .cv .table-cv{width:100%!important}
+  .cv .table-cv td{border:none!important;padding:.3rem .75rem .3rem 0!important;vertical-align:top!important}
+  .cv .date-column{width:155px!important;min-width:155px!important;max-width:155px!important;word-wrap:break-word!important}
+  /* ── Paper buttons: red outline ── */
+  ol.bibliography .btn,ol.bibliography button{color:#c41230!important;border-color:#c41230!important;background:transparent!important}
+  ol.bibliography .btn:hover,ol.bibliography button:hover{background:#c41230!important;color:#fff!important}
   /* ── Research page year labels: red in both modes ── */
   h2.year,h3.year,.publications h2,.publications h3{color:#c41230!important;opacity:.75!important}
 </style> <script>
