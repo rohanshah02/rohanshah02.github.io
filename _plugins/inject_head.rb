@@ -63,7 +63,12 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
           el.style.setProperty('background-color','transparent','important');
         });
       }
-      function run(){colors();typo();btns();}
+      function cvdates(){
+        document.querySelectorAll('.cv .list-group-item th').forEach(function(th){
+          if(th.textContent.trim()==='2021 - 2025'){th.textContent='2025';}
+        });
+      }
+      function run(){colors();typo();btns();cvdates();}
       if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
       if(window.MutationObserver){
         new MutationObserver(colors).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','class']});
