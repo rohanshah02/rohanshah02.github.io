@@ -26,7 +26,7 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
       .cv .list-group-item:first-child{border-top:none!important;padding-top:.25rem!important}
       /* Float the date table left so degree/job content flows to its right */
       .cv .list-group-item table{float:left!important;width:145px!important;min-width:145px!important;margin-right:1.5rem!important;border:none!important;border-collapse:collapse!important}
-      .cv .list-group-item table td,.cv .list-group-item table th{border:none!important;padding:.1rem 0!important;vertical-align:top!important;background:transparent!important}
+      .cv .list-group-item table td,.cv .list-group-item table th{border:none!important;padding:.1rem 0!important;vertical-align:top!important;background:transparent!important;text-align:left!important}
       /* Clearfix so the li expands to contain the float */
       .cv .list-group-item::after{content:""!important;display:block!important;clear:both!important}
     </style>
@@ -64,11 +64,19 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
         });
       }
       function cvdates(){
-        document.querySelectorAll('.cv .list-group-item th').forEach(function(th){
-          if(th.textContent.trim()==='2021 - 2025'){th.textContent='2025';}
+        /* Rewrite bachelor date badge to just graduation year */
+        document.querySelectorAll('.cv .list-group-item table th').forEach(function(th){
+          var t=th.textContent.replace(/\s+/g,' ').trim();
+          if(/2021/.test(t)&&/2025/.test(t)){th.textContent='2025';}
         });
       }
-      function run(){colors();typo();btns();cvdates();}
+      function navname(){
+        /* Bold the full "Rohan Shah" navbar brand (last name is font-weight-lighter by default) */
+        document.querySelectorAll('.navbar-brand,.navbar-brand *').forEach(function(el){
+          el.style.setProperty('font-weight','700','important');
+        });
+      }
+      function run(){colors();typo();btns();cvdates();navname();}
       if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
       if(window.MutationObserver){
         new MutationObserver(colors).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','class']});
