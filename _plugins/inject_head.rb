@@ -22,10 +22,11 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
       /* ── CV layout ── */
       .cv ul.list-group>li{list-style-type:none!important}
       .cv ul.list-group>li::marker{content:""!important}
-      .cv .list-group-item{border:none!important;border-top:1px solid rgba(0,0,0,.08)!important;padding:1rem 1.25rem!important;overflow:hidden!important}
+      .cv .list-group-item{border:none!important;border-top:1px solid rgba(128,128,128,.15)!important;padding:1.4rem 1.25rem!important;overflow:hidden!important}
       .cv .list-group-item:first-child{border-top:none!important;padding-top:.25rem!important}
       /* Float the date table left so degree/job content flows to its right */
-      .cv .list-group-item table{float:left!important;width:145px!important;min-width:145px!important;margin-right:1.5rem!important;border:none!important;border-collapse:collapse!important}
+      /* 175px fits "London, United Kingdom" without overflow */
+      .cv .list-group-item table{float:left!important;width:175px!important;min-width:175px!important;margin-right:1.5rem!important;border:none!important;border-collapse:collapse!important}
       .cv .list-group-item table td,.cv .list-group-item table th{border:none!important;padding:.1rem 0!important;vertical-align:top!important;background:transparent!important;text-align:left!important}
       /* Clearfix so the li expands to contain the float */
       .cv .list-group-item::after{content:""!important;display:block!important;clear:both!important}
