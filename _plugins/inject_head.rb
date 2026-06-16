@@ -1,7 +1,5 @@
 # inject_head.rb
 # Injects custom CSS and JS into every rendered HTML page at build time.
-# This is server-side injection — it works regardless of whether the gem's
-# head template includes _includes/head_custom.html or not.
 
 Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
   next unless page.output_ext == ".html"
@@ -22,11 +20,19 @@ Jekyll::Hooks.register [:pages, :documents], :post_render do |page|
       .cv .list-group-item:first-child{border-top:none!important}
       .cv .table-cv td{border:none!important}
       .cv .date-column{vertical-align:top!important}
+      /* ── Research page year labels: navy in light mode ── */
+      h2.year,h3.year,.publications h2,.publications h3{color:#1b2a4a!important;opacity:.75!important}
+      /* ── Dark mode year labels: red ── */
+      [data-theme="dark"] h2.year,[data-theme="dark"] h3.year,
+      [data-theme="dark"] .publications h2,[data-theme="dark"] .publications h3{color:#c41230!important;opacity:.75!important}
     </style>
     <script>
     (function(){
       var N='#1b2a4a',R='#c41230',W='#ffffff';
-      var V={'--global-theme-color':N,'--global-hover-color':R,'--global-hover-text-color':W,
+      /* --global-theme-color drives links, badges, active nav → RED
+         --global-hover-color drives link hover                 → NAVY
+         --global-footer-bg-color keeps footer navy             */
+      var V={'--global-theme-color':R,'--global-hover-color':N,'--global-hover-text-color':W,
              '--global-highlight-color':R,'--global-footer-bg-color':N,
              '--global-footer-text-color':'#e8e8e8','--global-footer-link-color':W};
       function colors(){

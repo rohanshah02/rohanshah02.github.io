@@ -7,8 +7,6 @@ nav: true
 nav_order: 4
 ---
 
-## Teaching Assistantships
-
 ### Spring 2026
 
 **GB306: Business Analytics I** — Teaching Assistant
