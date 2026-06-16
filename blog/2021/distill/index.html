@@ -33,12 +33,9 @@
   .cv .list-group-item{border:none!important;border-top:1px solid rgba(0,0,0,.06)!important}
   .cv .list-group-item:first-child{border-top:none!important}
   .cv .table-cv td{border:none!important}
-  .cv .date-column{vertical-align:top!important}
-  /* ── Research page year labels: navy in light mode ── */
-  h2.year,h3.year,.publications h2,.publications h3{color:#1b2a4a!important;opacity:.75!important}
-  /* ── Dark mode year labels: red ── */
-  [data-theme="dark"] h2.year,[data-theme="dark"] h3.year,
-  [data-theme="dark"] .publications h2,[data-theme="dark"] .publications h3{color:#c41230!important;opacity:.75!important}
+  .cv .date-column{vertical-align:top!important;width:155px!important;min-width:155px!important;word-wrap:break-word!important}
+  /* ── Research page year labels: red in both modes ── */
+  h2.year,h3.year,.publications h2,.publications h3{color:#c41230!important;opacity:.75!important}
 </style> <script>
 (function(){
   var N='#1b2a4a',R='#c41230',W='#ffffff';
