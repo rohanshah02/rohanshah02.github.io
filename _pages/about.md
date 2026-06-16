@@ -12,7 +12,7 @@ profile:
     <p>5161 Grainger Hall</p>
     <p>975 University Avenue</p>
     <p>Madison, WI 53706</p>
-    <p>rpshah3@wisc.edu</p>
+    <p><a href="mailto:rpshah3@wisc.edu" style="color:#c41230">rpshah3@wisc.edu</a></p>
 
 selected_papers: true
 social: true
